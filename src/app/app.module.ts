@@ -12,12 +12,21 @@ import { MovieListService } from '../services/movie-list/movie-list-service';
 import { ToastService } from '../services/toast/toast.service';
 import { MovieServiceProvider } from '../providers/movie-service/movie-service';
 import { HttpModule } from '@angular/http';
+import { AuthService } from '../services/auth';
+import { SigninPage } from '../pages/signin/signin';
+import { SignupPage } from '../pages/signup/signup';
+import { TabsPage } from '../pages/tabs/tabs';
+import { HomePage } from '../pages/home/home';
 
 
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    SignupPage,
+    SigninPage,
+    TabsPage,
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +37,11 @@ import { HttpModule } from '@angular/http';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+    SignupPage,
+    SigninPage,
+    TabsPage,
+    HomePage
   ],
   providers: [
     StatusBar,
@@ -36,7 +49,8 @@ import { HttpModule } from '@angular/http';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MovieListService,
     ToastService,
-    MovieServiceProvider
+    MovieServiceProvider,
+    AuthService
   ]
 })
 export class AppModule {}

@@ -10,7 +10,7 @@ export class MovieListService {
 
     constructor(private db: AngularFireDatabase){}
 
-    geMovieList(){
+    getMovieList(){
         return this.movieListRef;
     }
 
@@ -25,5 +25,12 @@ export class MovieListService {
     removeItem(item: Item){
         return this.movieListRef.remove(item.key);
     }
+
+    // filterItem(val: String){
+    //     if (val && val.trim() != '') {
+    //         return this.movieListRef.snapshotChanges.
+    //     }
+    // }
+
     
 }

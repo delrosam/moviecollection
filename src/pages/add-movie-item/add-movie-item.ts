@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Item } from '../../models/item/item.model';
 import { MovieListService } from '../../services/movie-list/movie-list-service';
 import { ToastService } from '../../services/toast/toast.service';
+import { HomePage } from '../home/home';
 
 
 
@@ -31,7 +32,7 @@ export class AddMovieItemPage {
   addItem(item: Item){
     this.movieList.addItem(item).then(ref => {
       this.toast.show(`${item.title} added!`);
-      this.navCtrl.setRoot('HomePage', {key: ref.key});
+      this.navCtrl.setRoot(HomePage, {key: ref.key});
     })
   }
 

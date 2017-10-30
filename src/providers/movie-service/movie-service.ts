@@ -28,9 +28,9 @@ export class MovieServiceProvider {
       //https://www.alaskaair.com/api/v1/AirportsLite/GetAllAirportsLite
       ///discover/movie/remote?language=en&media_type=movie
       //http://www.omdbapi.com/?t=Avengers&apikey=6a66af92 -WORKS 
-      let arr = ["Avengers","Armageddon"];
+      // let arr = ["Avengers","Armageddon"];
 
-      this.http.get('http://www.omdbapi.com/?t='+movieTitle+'&apikey=6a66af92')
+      this.http.get('http://www.omdbapi.com/?t=Avengers&apikey=6a66af92')
         .map(res => res.json())
         .subscribe(data => {
           // we've got back the raw data, now generate the core schedule data

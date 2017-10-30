@@ -1,7 +1,12 @@
 <ion-header>
   <ion-navbar color="primary">
+    <ion-buttons start>
+        <button start ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
     <ion-title>
-      Movie List
+      My Movies
     </ion-title>
     <ion-buttons end>
       <button navPush="AddMovieItemPage" ion-button>
@@ -12,23 +17,15 @@
 </ion-header>
 
 <ion-content padding>
-    <!-- <ion-list>
-      <ion-list-header>
-        Items
-      </ion-list-header> 
-      <ion-item *ngFor="let item of movieList$ | async" detail-pushs>
-          {{item.title}}
-      </ion-item>
-    </ion-list> -->
-
+    <ion-searchbar (ionInput)="searchItems($event)"></ion-searchbar>
     <ion-list>
         <ion-item-sliding *ngFor="let item of movieList$ | async">
           <ion-item navPush="MovieDetailsPage" [navParams]="{item: item}">
           <!-- <ion-avatar item-start>
             <img src="../assets/img/{{code.airportcode}}.jpg">
           </ion-avatar> -->
-          <h2>{{item.title}}</h2>
-          <p>{{item.year}}</p>
+          <h2>{{item?.title}}</h2>
+          <p>{{item?.year}}</p>
         </ion-item>
         <ion-item-options>
           <ion-buttons start>

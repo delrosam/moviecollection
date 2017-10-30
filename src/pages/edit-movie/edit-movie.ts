@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Item } from '../../models/item/item.model';
 import { MovieListService } from '../../services/movie-list/movie-list-service';
 import { ToastService } from '../../services/toast/toast.service';
+import { HomePage } from '../home/home';
 
 
 
@@ -29,7 +30,7 @@ export class EditMoviePage {
     this.movieList.editItem(item)
     .then(() => {
       this.toast.show(`${item.title} edited!`);
-      this.navCtrl.setRoot('HomePage');
+      this.navCtrl.setRoot(HomePage);
     });
   }
 
