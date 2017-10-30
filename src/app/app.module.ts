@@ -10,6 +10,8 @@ import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from './firebase.credentials';
 import { MovieListService } from '../services/movie-list/movie-list-service';
 import { ToastService } from '../services/toast/toast.service';
+import { MovieServiceProvider } from '../providers/movie-service/movie-service';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -19,6 +21,7 @@ import { ToastService } from '../services/toast/toast.service';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule
@@ -33,6 +36,7 @@ import { ToastService } from '../services/toast/toast.service';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MovieListService,
     ToastService,
+    MovieServiceProvider
   ]
 })
 export class AppModule {}

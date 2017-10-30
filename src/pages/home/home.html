@@ -23,7 +23,7 @@
 
     <ion-list>
         <ion-item-sliding *ngFor="let item of movieList$ | async">
-          <ion-item>
+          <ion-item navPush="MovieDetailsPage" [navParams]="{item: item}">
           <!-- <ion-avatar item-start>
             <img src="../assets/img/{{code.airportcode}}.jpg">
           </ion-avatar> -->
