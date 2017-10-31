@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Details</ion-title>
+    <ion-title>{{movieTitle}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -12,9 +12,9 @@
   <ion-card>
     
       <ion-item>
-        <ion-avatar item-start>
+        <!-- <ion-avatar item-start>
           <img src="{{moviePoster}}">
-        </ion-avatar>
+        </ion-avatar> -->
         <h2>{{movieTitle}}</h2>
         <p>{{movieReleased}}</p>
       </ion-item>
@@ -22,12 +22,22 @@
       <img src="{{moviePoster}}">
     
       <ion-card-content>
-      <p>{{moviePlot}}</p>
-
+        <p>{{moviePlot}}</p>
+        <ion-row>
+            <ion-col left text-left small>
+              <ion-note>Director: {{movieDirector}}</ion-note>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col left text-left small>
+              <ion-note>Actors: {{movieActors}}</ion-note>
+            </ion-col>
+        </ion-row>
       </ion-card-content>
     
+   
       <ion-row>
-        <ion-col>
+        <!-- <ion-col>
           <button ion-button icon-left clear small>
             <ion-icon name="star"></ion-icon>
             <div>{{movieimdbRating}}</div>
@@ -38,10 +48,20 @@
             <ion-icon name="happy"></ion-icon>
             <div>{{movieimdbVotes}}</div>
           </button>
+        </ion-col> -->
+        <ion-col center text-center small>
+            <ion-note>
+              Rating: {{movieimdbRating}}
+            </ion-note>
         </ion-col>
-        <ion-col center text-center>
+        <ion-col center text-center small>
+            <ion-note>
+              {{movieRated}}
+            </ion-note>
+        </ion-col>
+        <ion-col center text-center small>
           <ion-note>
-            {{movieRated}} - {{movieRuntime}}
+             {{movieRuntime}}
           </ion-note>
         </ion-col>
       </ion-row>

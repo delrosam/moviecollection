@@ -14,10 +14,11 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+  <ion-searchbar color="primary" [(ngModel)]="myInput"  (ionInput)="searchItems($event)" ></ion-searchbar>
 </ion-header>
-
+<!-- (ionCancel)="onCancel($event)" [showCancelButton]="shouldShowCancel" -->
 <ion-content padding>
-    <ion-searchbar (ionInput)="searchItems($event)"></ion-searchbar>
+    <!-- <ion-searchbar (ionInput)="searchItems($event)"></ion-searchbar> -->
     <ion-list>
         <ion-item-sliding *ngFor="let item of movieList$ | async">
           <ion-item navPush="MovieDetailsPage" [navParams]="{item: item}">
@@ -25,7 +26,7 @@
             <img src="../assets/img/{{code.airportcode}}.jpg">
           </ion-avatar> -->
           <h2>{{item?.title}}</h2>
-          <p>{{item?.year}}</p>
+          <p>{{item?.type}}</p>
         </ion-item>
         <ion-item-options>
           <ion-buttons start>

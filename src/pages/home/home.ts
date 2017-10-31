@@ -17,12 +17,13 @@ export class HomePage {
   movieCollection: Item[];
   movieList$: Observable<Item[]>;
 
-  constructor(public navCtrl: NavController,
-              private movieList: MovieListService,
-              private toast: ToastService) {
+  constructor(
+      public navCtrl: NavController,
+      private movieList: MovieListService,
+      private toast: ToastService) {
 
+      this.searchQuery = '';
       this.initializeItems();
-      
   }
 
   initializeItems(){
@@ -37,8 +38,6 @@ export class HomePage {
       ));
 
     });
-
-    
 
     
   }
@@ -58,7 +57,7 @@ export class HomePage {
 
 searchItems(ev: any) {
    // Reset items back to all of the items
-   this.initializeItems();
+    this.initializeItems();
    
     // set val to the value of the searchbar
     let val = ev.target.value;
@@ -76,7 +75,11 @@ searchItems(ev: any) {
 
     }
 
-}
+
+
+  }
+
+
 
 
 

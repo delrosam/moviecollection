@@ -15,7 +15,7 @@ import { HomePage } from '../home/home';
 export class AddMovieItemPage {
   item: Item = {
     title: '',
-    year: undefined,
+    type: '',
   }
 
   constructor(
