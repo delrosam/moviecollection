@@ -17,6 +17,14 @@
             <button 
             ion-item
             icon-left
+            (click)="onLoad(buylistPage)"
+            *ngIf="isAuthenticated">
+                <ion-icon name="pricetags"></ion-icon>
+                Buy List
+            </button>
+            <button 
+            ion-item
+            icon-left
             (click)="onLoad(signinPage)"
             *ngIf="!isAuthenticated">
                 <ion-icon name="log-in"></ion-icon>

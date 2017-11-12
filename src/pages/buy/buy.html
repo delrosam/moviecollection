@@ -1,0 +1,52 @@
+<!--
+  Generated template for the BuyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Buy Item</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Title</ion-label>
+    <ion-input [(ngModel)]="item.title"></ion-input>
+  </ion-item>
+
+  <!-- <ion-item>
+      <ion-label>Year</ion-label>
+      <ion-input [(ngModel)]="item.year" type="number" placeholder="2014"></ion-input>
+  </ion-item> 
+
+    title: string;
+    type: string;
+    price: number;
+    store: string;
+  -->
+
+  <ion-item>
+    <ion-label floating>Type</ion-label>
+    <ion-input [(ngModel)]="item.type"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Price</ion-label>
+      <ion-input [(ngModel)]="item.price"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Store</ion-label>
+      <ion-input [(ngModel)]="item.store"></ion-input>
+  </ion-item>
+
+
+  <button ion-button block (click)="addBuyItem(item)">Add</button>
+
+</ion-content>

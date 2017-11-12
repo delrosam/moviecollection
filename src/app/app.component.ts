@@ -7,6 +7,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 import { AuthService } from '../services/auth';
+import { BuyPage } from '../pages/buy/buy';
+import { BuyListPage } from '../pages/buy-list/buy-list';
 
 
 @Component({
@@ -14,6 +16,7 @@ import { AuthService } from '../services/auth';
 })
 export class MyApp {
   rootPage: any = TabsPage;//Buy List Default page
+  buylistPage: any = BuyListPage;
   signinPage = SigninPage;
   signupPage = SignupPage;
   isAuthenticated = false;

@@ -17,6 +17,8 @@ import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
+import { BuyListPage } from '../pages/buy-list/buy-list';
+
 
 
 
@@ -26,7 +28,8 @@ import { HomePage } from '../pages/home/home';
     SignupPage,
     SigninPage,
     TabsPage,
-    HomePage
+    HomePage,
+    BuyListPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { HomePage } from '../pages/home/home';
     SignupPage,
     SigninPage,
     TabsPage,
-    HomePage
+    HomePage,
+    BuyListPage
   ],
   providers: [
     StatusBar,

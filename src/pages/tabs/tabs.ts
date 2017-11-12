@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { BuyListPage } from '../buy-list/buy-list';
 
 
 
@@ -11,6 +12,7 @@ import { HomePage } from '../home/home';
 export class TabsPage {
 
   homePage = HomePage;
+  buyPage = BuyListPage;
   
 
 }
